@@ -1,0 +1,35 @@
+.navbar-inverse {
+    background-color: blue;
+    border-color: blue;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-inverse .navbar-toggle:hover {
+    background-color: white;
+}
+
+.navbar-inverse .navbar-toggle:focus {
+    background-color: blue;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+    color: white;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar:hover,
+.navbar-inverse .navbar-toggle .icon-bar:focus {
+    background-color: #0000ff;
+}
+
+.with-gutters {
+    display: inline-block;
+    width: 60%;
+    margin-left: 20%;
+}
