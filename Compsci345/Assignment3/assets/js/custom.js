@@ -1,0 +1,3 @@
+function disableTextArea() {
+    document.getElementById("");
+}

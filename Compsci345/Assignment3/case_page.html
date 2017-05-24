@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>Drama Queens</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
 
 <body>
 
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -21,12 +21,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-                <a class="navbar-brand" href="#">Drama Queens</a>
+                <a class="navbar-brand" href="assignmnet3.html">Drama Queens  <span class="glyphicon glyphicon-queen"></span></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li><a href="assignmnet3.html">Home</a></li>
-                    <li><a href="profile.html">Profile</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="case_page.html">Questions</a></li>
                     <li class="dropdown">
@@ -39,6 +38,10 @@
                     </li>
                     <li><a href="#">Settings</a></li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span> David Smith</a></li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -46,34 +49,151 @@
     <div class="container">
         <div class="jumbotron text-center">
             <h1>Structured Questions.</h1>
-
+            <p>Based on the Hamlet case study.</p>
         </div>
     </div>
 
     <div class="container with-gutters">
         <div class="panel-group">
             <div class="panel panel-default">
-                <div class="panel-heading">Case 1 - " "</div>
+                <div class="panel-title">Case One - "consectetur adipisicing elit, sed do eiusmod tempor"</div>
+                <img src="assets/img/hamlet1.jpg" alt="hamlet image 1" width="90%" hspace="5%">
                 <div class="panel-body">
-                    <a href="case_one.html" class="btn btn-primary btn-block" role="button">Select</a>
+                    <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#case1">Select</button>
+                    <div id="case1" class="collapse">
+                        <h3>Question One</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="answer c1q1" placeholder="Write your answer here" padding></textarea>
+                            <button type="submit" id="" onclick="disableTextArea">Submit</button>
+                        </div>
+
+                        <h3>Question Two</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="answer c1q2" placeholder="Write your answer here"></textarea>
+                            <button type="submit" id="" onclick="disableTextArea">Submit</button>
+                        </div>
+
+                        <h3>Question Three</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="answerc1q3" placeholder="Write your answer here"></textarea>
+                            <button type="submit" id="" onclick="disableTextArea">Submit</button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="panel panel-default">
-                <div class="panel-heading">Case 2 - " "</div>
+                <div class="panel-title">Case Two - "Ut enim ad minim veniam, quis nostrud exercitation."</div>
+                <img src="assets/img/hamlet2.jpg" alt="hamlet image 2" width="90%" hspace="5%">
                 <div class="panel-body">
-                    <a href="case_one.html" class="btn btn-primary btn-block" role="button">Select</a>
+                    <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#case2">Select</button>
+                    <div id="case2" class="collapse">
+                        <h3>Question One</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="answer c2q1" placeholder="Write your answer here"></textarea>
+                            <button type="submit" id="" onclick="disableTextArea">Submit</button>
+                        </div>
+
+                        <h3>Question Two</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="answer c2q2" placeholder="Write your answer here"></textarea>
+                            <button type="submit" id="" onclick="disableTextArea">Submit</button>
+                        </div>
+
+                        <h3>Question Three</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="answerc2q3" placeholder="Write your answer here"></textarea>
+                            <button type="submit" id="" onclick="disableTextArea">Submit</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="panel panel-default">
-                <div class="panel-heading">Case 3 - " "</div>
+                <div class="panel-title">Case Three - "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
+                <img src="assets/img/hamlet3.jpg" alt="hamlet image 3" width="90%" hspace="5%">
                 <div class="panel-body">
-                    <a href="case_one.html" class="btn btn-primary btn-block" role="button">Select</a>
+                    <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#case3">Select</button>
+                    <div id="case3" class="collapse">
+                        <h3>Question One</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="answer c3q1" placeholder="Write your answer here"></textarea>
+                            <button type="submit" id="" onclick="disableTextArea">Submit</button>
+                        </div>
+
+                        <h3>Question Two</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="answer c3q2" placeholder="Write your answer here"></textarea>
+                            <button type="submit" id="" onclick="disableTextArea">Submit</button>
+                        </div>
+
+                        <h3>Question Three</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="answerc3q3" placeholder="Write your answer here"></textarea>
+                            <button type="submit" id="" onclick="disableTextArea">Submit</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="panel panel-default">
-                <div class="panel-heading">Case 4 - " "</div>
+                <div class="panel-title">Case Four - "Lorem ipsum dolor sit amet, adipisicing elit, sed do eiusmod."</div>
+                <img src="assets/img/hamlet4.jpg" alt="hamlet image 4" width="90%" hspace="5%">
                 <div class="panel-body">
-                    <a href="case_one.html" class="btn btn-primary btn-block" role="button">Select</a>
+                    <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#case4">Select</button>
+                    <div id="case4" class="collapse">
+                        <h3>Question One</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="answer c4q1" placeholder="Write your answer here"></textarea>
+                            <button type="submit" id="" onclick="disableTextArea">Submit</button>
+                        </div>
+
+                        <h3>Question Two</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="answer c4q2" placeholder="Write your answer here"></textarea>
+                            <button type="submit" id="" onclick="disableTextArea">Submit</button>
+                        </div>
+
+                        <h3>Question Three</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="answerc4q3" placeholder="Write your answer here"></textarea>
+                            <button type="submit" id="" onclick="disableTextArea">Submit</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
