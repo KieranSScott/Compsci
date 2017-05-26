@@ -1,49 +1,58 @@
-.navbar-inverse {
-    background-color: blue;
-    border-color: blue;
-}
+    .navbar-inverse {
+        background-color: blue;
+        border-color: blue;
+    }
 
-.navbar-inverse .navbar-brand {
-    color: white;
-}
+    .navbar-inverse .navbar-brand {
+        color: white;
+    }
 
-.navbar-inverse .navbar-nav>li>a {
-    color: white;
-}
+    .navbar-inverse .navbar-nav>li>a {
+        color: white;
+    }
 
-.navbar-inverse .navbar-toggle:hover {
-    background-color: white;
-}
+    .navbar-inverse .navbar-toggle:hover {
+        background-color: white;
+    }
 
-.navbar-inverse .navbar-toggle:focus {
-    background-color: blue;
-}
+    .navbar-inverse .navbar-toggle:focus {
+        background-color: blue;
+    }
 
-.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
-    color: white;
-}
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+        color: white;
+    }
 
-.navbar-inverse .navbar-toggle .icon-bar:hover,
-.navbar-inverse .navbar-toggle .icon-bar:focus {
-    background-color: #0000ff;
-}
+    .navbar-inverse .navbar-toggle .icon-bar:hover,
+    .navbar-inverse .navbar-toggle .icon-bar:focus {
+        background-color: #0000ff;
+    }
 
-.with-gutters {
-    display: inline-block;
-    width: 60%;
-    margin-left: 20%;
-}
+    .with-gutters {
+        display: inline-block;
+        width: 60%;
+        margin-left: 20%;
+    }
 
-body {
-    padding-top: 70px;
-}
+    body {
+        padding-top: 70px;
+    }
 
-.panel-title {
-    font-size: 30px;
-    padding: 10px 15px;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-}
+    .panel-title {
+        font-size: 30px;
+        padding: 10px 15px;
+        border-bottom: 1px solid transparent;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
 
+    button,
+    input,
+    select,
+    textarea {
+        margin-top: 5px;
+    }
 
+    .btn-primary {
+        background-color: blue;
+    }
