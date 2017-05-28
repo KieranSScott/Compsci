@@ -83,4 +83,10 @@
 
     .btn {
         background-color: blue;
+        color: white;
+    }
+
+    .title-font {
+        font-style: italic;
+        font-weight: bold;
     }
