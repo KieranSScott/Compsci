@@ -7,14 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/custom.css">
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/custom.js"></script>
+
 </head>
 
 <body>
 
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -27,9 +25,8 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li><a href="assignmnet3.html">Home</a></li>
-                    <li><a href="#">Profile</a></li>
                     <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Questions</a></li>
+                    <li><a href="case_page.html">Questions</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Peer group<span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -40,21 +37,606 @@
                     </li>
                     <li><a href="#">Settings</a></li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span> David Smith</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <div class="container">
         <div class="jumbotron text-center">
-            <h1>Sarah's Answers</h1>
-
+            <h1>Structured Questions.</h1>
+            <p>Based on the Hamlet case study.</p>
         </div>
     </div>
 
-    <div class="container">
-        <h2>Question.</h2>
-        <p></p>
+    <div class="with-gutters">
+
+        <ul id="tabbing-controls" data-tabref="case_form">
+            <li class="btn tab-controls active" data-ref="case1" onclick="change_tab(this)">Case One</li>
+            <li class="btn tab-controls" data-ref="case2" onclick="change_tab(this)">Case Two</li>
+            <li class="btn tab-controls" data-ref="case3" onclick="change_tab(this)">Case Three</li>
+            <li class="btn tab-controls" data-ref="case4" onclick="change_tab(this)">Case Four</li>
+        </ul>
+
+
+
+        <form id="case_form" class="submission-form tabbed" onsubmit="submit_function(this)">
+
+
+            <fieldset id="case1" class="tab active-tab">
+                <div class="container with-gutters-var">
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-title">Case One - "consectetur adipisicing elit, sed do eiusmod tempor"</div>
+                            <img class="with-gutters-var" src="assets/img/hamlet1.jpg" alt="hamlet image 1" width="80%" hspace="10%">
+                            <div class="panel-body">
+                                <h3>Question One</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+
+                                <div class="panel-body">
+                                    <h4>Answer</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                    <h4>Feedback</h4>
+                                    <p id="c1q1_add">
+                                        Megan: incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>
+                                        <p></p>
+
+
+                                    </p>
+
+                                    <div class="panel-body">
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#c1q1_modul">Give Feedback</button>
+                                        <div class="modal fade" id="c1q1_modul" role="dialog">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Give some feedback for your peer's response</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" rows="5" id="c1q1_response" placeholder="Write your response here in the form, Name: response."></textarea>
+                                                            <button id="c1q1_btn" type="Button" onclick="addResponse()">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <h3>Question Two</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+
+                                <div class="panel-body">
+                                    <h4>Answer</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                    <h4>Feedback</h4>
+                                    <p id="c1q2_add">
+                                        Megan: incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>
+                                        <p></p>
+
+
+                                    </p>
+
+                                    <div class="panel-body">
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#c1q2_modul">Give Feedback</button>
+                                        <div class="modal fade" id="c1q2_modul" role="dialog">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Give some feedback for your peer's response</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" rows="5" id="c1q2_response" placeholder="Write your response here in the form, Name: response."></textarea>
+                                                            <button id="c1q2_btn" type="Button" onclick="addResponse()">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <h3>Question Three</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+
+                                <div class="panel-body">
+                                    <h4>Answer</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                    <h4>Feedback</h4>
+                                    <p id="c1q3_add">
+                                        Megan: incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>
+                                        <p></p>
+
+
+                                    </p>
+
+                                    <div class="panel-body">
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#c1q3_modul">Give Feedback</button>
+                                        <div class="modal fade" id="c1q3_modul" role="dialog">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Give some feedback for your peer's response</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" rows="5" id="c1q3_response" placeholder="Write your response here in the form, Name: response."></textarea>
+                                                            <button id="c1q3_btn" type="Button" onclick="addResponse()">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+
+            <fieldset id="case2" class="tab">
+                <div class="container with-gutters-var">
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-title">Case Two - "Ut enim ad minim veniam, quis nostrud exercitation."</div>
+                            <img class="with-gutters-var" src="assets/img/hamlet2.jpg" alt="hamlet image 2" width="80%" hspace="10%">
+                            <div class="panel-body">
+                                <h3>Question One</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+
+                                <div class="panel-body">
+                                    <h4>Answer</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                    <h4>Feedback</h4>
+                                    <p id="c2q1_add">
+                                        Megan: incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>
+                                        <p></p>
+
+
+                                    </p>
+
+                                    <div class="panel-body">
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#c2q1_modul">Review Answer</button>
+                                        <div class="modal fade" id="c2q1_modul" role="dialog">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Give some feedback for your peer's response</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" rows="5" id="c2q1_response" placeholder="Write your response here in the form, Name: response."></textarea>
+                                                            <button id="c2q1_btn" type="Button" onclick="addResponse()">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <h3>Question Two</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+
+                                <div class="panel-body">
+                                    <h4>Answer</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                    <h4>Feedback</h4>
+                                    <p id="c2q2_add">
+                                        Megan: incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>
+                                        <p></p>
+
+
+                                    </p>
+
+                                    <div class="panel-body">
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#c2q2_modul">Review Answer</button>
+                                        <div class="modal fade" id="c2q2_modul" role="dialog">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Give some feedback for your peer's response</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" rows="5" id="c2q2_response" placeholder="Write your response here in the form, Name: response."></textarea>
+                                                            <button id="c2q2_btn" type="Button" onclick="addResponse()">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <h3>Question Three</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+
+                                <div class="panel-body">
+                                    <h4>Answer</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                    <h4>Feedback</h4>
+                                    <p id="c2q3_add">
+                                        Megan: incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>
+                                        <p></p>
+
+
+                                    </p>
+
+                                    <div class="panel-body">
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#c2q3_modul">Review Answer</button>
+                                        <div class="modal fade" id="c2q3_modul" role="dialog">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Give some feedback for your peer's response</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" rows="5" id="c2q3_response" placeholder="Write your response here in the form, Name: response."></textarea>
+                                                            <button id="c2q3_btn" type="Button" onclick="addResponse()">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+
+            <fieldset id="case3" class="tab">
+                <div class="container with-gutters-var">
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-title">Case Three - "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
+                            <img class="with-gutters-var" src="assets/img/hamlet3.jpg" alt="hamlet image 3" width="80%" hspace="10%">
+                            <div class="panel-body">
+                                <h3>Question One</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+
+                                <div class="panel-body">
+                                    <h4>Answer</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                    <h4>Feedback</h4>
+                                    <p id="c3q1_add">
+                                        Megan: incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>
+                                        <p></p>
+
+
+                                    </p>
+
+                                    <div class="panel-body">
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#c3q1_modul">Review Answer</button>
+                                        <div class="modal fade" id="c3q1_modul" role="dialog">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Give some feedback for your peer's response</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" rows="5" id="c3q1_response" placeholder="Write your response here in the form, Name: response."></textarea>
+                                                            <button id="c3q1_btn" type="Button" onclick="addResponse()">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3>Question Two</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+
+                                <div class="panel-body">
+                                    <h4>Answer</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                    <h4>Feedback</h4>
+                                    <p id="c3q2_add">
+                                        Megan: incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>
+                                        <p></p>
+
+
+                                    </p>
+
+                                    <div class="panel-body">
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#c3q2_modul">Review Answer</button>
+                                        <div class="modal fade" id="c3q2_modul" role="dialog">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Give some feedback for your peer's response</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" rows="5" id="c3q2_response" placeholder="Write your response here in the form, Name: response."></textarea>
+                                                            <button id="c3q2_btn" type="Button" onclick="addResponse()">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3>Question Three</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+
+                                <div class="panel-body">
+                                    <h4>Answer</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                    <h4>Feedback</h4>
+                                    <p id="c3q3_add">
+                                        Megan: incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>
+                                        <p></p>
+
+
+                                    </p>
+
+                                    <div class="panel-body">
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#c3q3_modul">Review Answer</button>
+                                        <div class="modal fade" id="c3q3_modul" role="dialog">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Give some feedback for your peer's response</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" rows="5" id="c3q3_response" placeholder="Write your response here in the form, Name: response."></textarea>
+                                                            <button id="c3q3_btn" type="Button" onclick="addResponse()">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset id="case4" class="tab">
+                <div class="container with-gutters-var">
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-title">Case Four - "Lorem ipsum dolor sit amet, adipisicing elit, sed do eiusmod."</div>
+                            <img class="with-gutters-var" src="assets/img/hamlet4.jpg" alt="hamlet image 4" width="80%" hspace="10%">
+                            <div class="panel-body">
+                                <h3>Question One</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+
+                                <div class="panel-body">
+                                    <h4>Answer</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                    <h4>Feedback</h4>
+                                    <p id="c4q1_add">
+                                        Megan: incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>
+                                        <p></p>
+
+
+                                    </p>
+
+                                    <div class="panel-body">
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#c4q1_modul">Review Answer</button>
+                                        <div class="modal fade" id="c4q1_modul" role="dialog">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Give some feedback for your peer's response</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" rows="5" id="c4q1_response" placeholder="Write your response here in the form, Name: response."></textarea>
+                                                            <button id="c4q1_btn" type="Button" onclick="addResponse()">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <h3>Question Two</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+
+                                <div class="panel-body">
+                                    <h4>Answer</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                    <h4>Feedback</h4>
+                                    <p id="c4q2_add">
+                                        Megan: incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>
+                                        <p></p>
+
+
+                                    </p>
+
+                                    <div class="panel-body">
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#c4q2_modul">Review Answer</button>
+                                        <div class="modal fade" id="c4q2_modul" role="dialog">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Give some feedback for your peer's response</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" rows="5" id="c4q2_response" placeholder="Write your response here in the form, Name: response."></textarea>
+                                                            <button id="c4q2_btn" type="Button" onclick="addResponse()">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3>Question Three</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+
+
+                                <div class="panel-body">
+                                    <h4>Answer</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                    <h4>Feedback</h4>
+                                    <p id="c4q3_add">
+                                        Megan: incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/>
+                                        <p></p>
+
+
+                                    </p>
+
+                                    <div class="panel-body">
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#c4q3_modul">Review Answer</button>
+                                        <div class="modal fade" id="c4q3_modul" role="dialog">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Give some feedback for your peer's response</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" rows="5" id="c4q3_response" placeholder="Write your response here in the form, Name: response."></textarea>
+                                                            <button id="c4q3_btn" type="Button" onclick="addResponse()">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+        </form>
+
+
     </div>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
 
 </body>
 

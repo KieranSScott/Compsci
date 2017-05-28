@@ -34,6 +34,14 @@
         margin-left: 20%;
     }
 
+    .with-gutters-var {
+        display: inline-block;
+        width: 96%;
+        margin-left: 2%;
+        margin-bottom: 5%;
+        height: 90%;
+    }
+
     body {
         padding-top: 70px;
     }
@@ -54,5 +62,25 @@
     }
 
     .btn-primary {
+        background-color: blue;
+    }
+
+    .tabbed>* {
+        height: 500px;
+    }
+
+    .tabbed .tab {
+        display: none;
+    }
+
+    .tabbed .tab.active-tab {
+        display: inline-block;
+    }
+
+    .btn.active {
+        background-color: #337ab7;
+    }
+
+    .btn {
         background-color: blue;
     }
