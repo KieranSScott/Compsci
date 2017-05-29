@@ -1,0 +1,4 @@
+"id","x.location","y.location","status","ambulance"
+1,9,31,"Transporting","A42"
+2,27,40,"Assigned","A7"
+3,82,12,"Pending","-"

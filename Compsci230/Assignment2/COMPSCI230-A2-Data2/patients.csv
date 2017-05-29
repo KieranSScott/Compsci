@@ -1,0 +1,11 @@
+"id","x.location","y.location","status","ambulance"
+1,24,24,"Transporting","A42"
+2,46,47,"Transporting","A7"
+3,15,75,"Transporting","A9"
+4,76,43,"Assigned","A117"
+5,68,78,"Assigned","A8"
+6,85,65,"Assigned","A72"
+7,33,56,"Pending",
+8,45,25,"Pending",
+9,51,71,"Pending",
+10,50,94,"Pending",

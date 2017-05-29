@@ -1,0 +1,10 @@
+﻿Kieran Sean Scott
+UPI: ksco491
+ID: 439868967
+
+This assignment took me approximitally 12 hours.
+I found the bouncing class, moving rectangle and moving sqaure easy (along with the basic changes to A1.java)
+I found the drawHandles differcult because I was not working for close to 5 hours but then some how started working the next day. Also I was over complecating the polymophised methods in movingSqaure which wasted a lot of time.
+The topics that the assignment helped me most understand was GUI.
+I have no other comments.
+
