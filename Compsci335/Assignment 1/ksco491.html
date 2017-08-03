@@ -1,4 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+    <title>La Boutique Cassée</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="ksco491.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>La Boutique Cassée</h1>
+    </header>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Home</button>
+        <button class="tablinks" onclick="openTab(event, 'Register')">Register</button>
+        <button class="tablinks" onclick="openTab(event, 'Guest Book')">Guest Book</button>
+        <button class="tablinks" onclick="openTab(event, 'Books'); getBooks();">Books</button>
+        <button class="tablinks" onclick="openTab(event, 'BluRays'); getBrs();">BluRays</button>
+        <button class="tablinks" onclick="openTab(event, 'About')">About</button>
+    </div>
+
+
+    <div id="Home" class="tabcontent">
+
+        <img src="Logo.png">
+        <aside>
+            <p>
+                La Boutique Cassée is an online BluRay and Book store. You are able to browse the selection of books and blurays at you liesure and buy which ever one you wish.
+            </p>
+        </aside>
+
+    </div>
+
+    <div id="Register" class="tabcontent"></div>
+    <div id="Guest Book" class="tabcontent">
+        <div class="gutters">
+            <h2>Guest Book</h2>    
+            <p>It would be much appreciated if you could leave a comment about the site.</p>
+            <textarea id="comment" rows="6" cols="75" placeholder="Comment"></textarea><br>
+            <input type="text" id="name" size="80%" placeholder="Name"><br><br>
+            <input type="submit" onclick="postComment()">
+            <br><br><br>
+            <iframe src="http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/htmlcomments" id="comments" width="570"></iframe>
+        </div>
+        
+    </div>
+    <div id="Books" class="tabcontent">
+        <div>
+            <input type="text" id="bookSearchBar" onkeydown="bookSearch()">
+            <table id="showBook" ></table>
+        </div>
+    </div>
+    <div id="BluRays" class="tabcontent">
+        <div>
+            <input type="text" id="brSearchBar" onkeydown="brSearch()">
+            <table id="showBr"></table>
+        </div>
+    </div>
+    <div id="About" class="tabcontent">
+        <p>
+            This webpage has been created aspart of an Assignment for the UoA Compsci 335 paper by Kieran Scott, UPI: ksco491.
+        </p>
+    </div>
+
+    <script src="ksco491.js"></script>
+</body>
+
 </html>
