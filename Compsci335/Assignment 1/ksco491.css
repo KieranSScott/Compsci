@@ -1,53 +1,17 @@
 h1 {
     color: blue;
 }
-
-
-/* Style the tab */
-
-div.tab {
+.tabs {
     overflow: hidden;
     border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    background-color: #f1f1ff;
 }
 
 
-/* Style the buttons inside the tab */
-
-div.tab button {
+.tabs button {
     background-color: inherit;
-    float: left;
     border: none;
-    outline: none;
-    cursor: pointer;
     padding: 14px 16px;
-    transition: 0.3s;
-}
-
-
-/* Change background color of buttons on hover */
-
-div.tab button:hover {
-    background-color: #0000ff;
-    color: #ffffff;
-}
-
-
-/* Create an active/current tablink class */
-
-div.tab button.active {
-    background-color: #0000ee;
-    color: #ffffff; 
-}
-
-
-/* Style the tab content */
-
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
 }
 
 .gutters {
@@ -56,6 +20,59 @@ div.tab button.active {
     margin-left: 20%;
 }
 
-td {
-    width: 300px;
+.gutters-var {
+    display: inline-block;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.image {
+    margin-left: 20%;
+    padding: 6px;
+    border: 2px solid #aaa;
+    width: 33%;
+    color: blue;
+    font-size: 20px;
+}
+
+.title{
+    border: 2px solid #aaa;
+    width: 100%;
+    color: blue;
+    font-size: 20px;
+}
+
+.buy {
+    border: 2px solid #aaa;
+    width: 33%;
+}
+
+#bookSearchBar {
+    width: 80%;
+    margin-left: 10%;
+    border: 2px solid #aaa;
+}
+
+#brSearchBar {
+    width: 80%;
+    margin-left: 10%;
+    border: 2px solid #aaa;
+}
+
+.tabs button:hover {
+    background-color: #0000ff;
+    color: #ffffff;
+}
+
+.tabs button.active {
+    background-color: #0000ee;
+    color: #ffffff; 
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #f1f1ff;
 }

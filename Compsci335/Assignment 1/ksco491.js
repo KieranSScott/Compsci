@@ -1,4 +1,5 @@
 function getBooks() {
+    console.log("hi")
     var uri = "http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/booklist"
     var xhr = new XMLHttpRequest();
     xhr.open("GET", uri, true);
@@ -11,14 +12,15 @@ function getBooks() {
 }
 
 function showBooks(books) {
-    var tableContent = "<tr><td>Book</td><td>Title</td></tr>\n ";
+    var tableContent = "<tr><td class='image'>Book</td><td class='title'>Title</td><td class='buy'></td></tr>\n ";
     for (var i = 0; i < books.length; ++i) {
         var book = books[i];
-        console.log(book.Title);
         var image = "http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/bookimg?id=" + book.Id;
-        tableContent += "<td>" + "<img src='" + image + "'><img/>  </td><td>" + book.Title + "</td></tr>\n ";
+        var id = JSON.stringify(book.Id);
+        tableContent += "<td class='image'><img src='" + image + "' width='200px' height='300px'><img/>  </td><td class='title'>" + book.Title + "</td><td class='buy'> <input type='image' src='buy.jpg' name='buyItem' id='butItem' width='100px' height='50px' onclick='buyBook("+ id+")'/>  </td></tr>\n ";
     }
     document.getElementById("showBook").innerHTML = tableContent;
+    console.log(book.Id);
 }
 
 function getBrs() {
@@ -34,40 +36,31 @@ function getBrs() {
 }
 
 function showBrs(brs) {
-    var tableContent = "<tr><td>BluRay</td><td>Title</td></tr>\n ";
+    var tableContent = "<tr><td class='image'>Book</td><td class='title'>Title</td><td class='buy'></td></tr>\n ";
     for (var i = 0; i < brs.length; ++i) {
         var br = brs[i];
         var image = "http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/brimg?id=" + br.Id;
-        tableContent += "<td>" + "<img src='" + image + "'><img/>  </td><td>" + br.Title + "</td></tr>\n ";
+        var id = JSON.stringify(br.Id);
+        tableContent += "<td class='image'><img src='" + image + "'width='200px' height='300px'><img/>  </td><td class='title'>" + br.Title + "</td><td class='buy'><input type='image' src='buy.jpg' name='buyItem' id='butItem' width='100px' height='50px' onclick='buyBr(" + id +")'/></td></tr>\n ";
     }
     document.getElementById("showBr").innerHTML = tableContent;
 }
 
-function openTab(evt, tabName) {    // Declare all variables
-       
-    var i, tabcontent, tablinks;
-
-        // Get all elements with class="tabcontent" and hide them
-       
-    tabcontent = document.getElementsByClassName("tabcontent");   
-    for (i = 0; i < tabcontent.length; i++) {       
-        tabcontent[i].style.display = "none";   
-    }
-
-        // Get all elements with class="tablinks" and remove the class "active"
-       
-    tablinks = document.getElementsByClassName("tablinks");   
-    for (i = 0; i < tablinks.length; i++) {       
-        tablinks[i].className = tablinks[i].className.replace(" active", "");   
-    }
-
-        // Show the current tab, and add an "active" class to the button that opened the tab
-       
+function changeTab(event, tabName) {     
+    var tabBtn = document.getElementsByClassName("tabBtn");
+    var tabcontent = document.getElementsByClassName("tabcontent");   
+    for (var i = 0; i < tabcontent.length; i++) {       
+        tabcontent[i].style.display = "none"; 
+        tabBtn[i].className = tabBtn[i].className.replace(" active", "");
+    } 
+    event.currentTarget.className += " active";
     document.getElementById(tabName).style.display = "block";   
-    evt.currentTarget.className += " active";
+    
 }
 
-document.getElementById("defaultOpen").click();
+window.onload = function() {
+	document.getElementById("default").click();
+}
 
 function postComment() {
     var name = document.getElementById('name').value;
@@ -77,8 +70,10 @@ function postComment() {
     xhr.open("POST", uri, true);
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.send(JSON.stringify(comment));
-    var iframe = document.getElementById('comments');
-    iframe.src = iframe.src;
+    xhr.onload = function () {
+        var iframe = document.getElementById('comments');
+        iframe.src = iframe.src;
+    }
 }
 
 function bookSearch() {
@@ -105,4 +100,34 @@ function brSearch() {
         showBrs(resp);
     }
     xhr.send(null);
+}
+
+function register() {
+    var login = document.getElementById('login').value;
+    var password = document.getElementById('password').value;
+	var address = document.getElementById('address').value;
+    var registration = {
+        Address: address,
+        Name: login,
+        Password: password,
+    }
+    var xhr = new XMLHttpRequest();
+    var uri = "http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/register"
+    xhr.open("POST", uri, true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.send(JSON.stringify(registration));
+    xhr.onload = function () {
+        alert("You are now registered " + login);
+    }
+}
+
+function buyBook(Id) {
+	var uri = " http://redsox.uoa.auckland.ac.nz/BC/Closed/Service.svc/bookbuy?id=" + Id;
+	window.open(uri, "_blank");
+    
+}
+
+function buyBr(Id) {
+	var uri = "http://redsox.uoa.auckland.ac.nz/BC/Closed/Service.svc/id" + Id;
+	window.open(uri, "_blank");
 }
