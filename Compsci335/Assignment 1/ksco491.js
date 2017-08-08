@@ -1,5 +1,4 @@
 function getBooks() {
-    console.log("hi")
     var uri = "http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/booklist"
     var xhr = new XMLHttpRequest();
     xhr.open("GET", uri, true);
@@ -36,7 +35,7 @@ function getBrs() {
 }
 
 function showBrs(brs) {
-    var tableContent = "<tr><td class='image'>Book</td><td class='title'>Title</td><td class='buy'></td></tr>\n ";
+    var tableContent = "<tr><td class='image'>Bluray</td><td class='title'>Title</td><td class='buy'></td></tr>\n ";
     for (var i = 0; i < brs.length; ++i) {
         var br = brs[i];
         var image = "http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/brimg?id=" + br.Id;
@@ -46,6 +45,9 @@ function showBrs(brs) {
     document.getElementById("showBr").innerHTML = tableContent;
 }
 
+
+/*The following code on for the tabbing function of the website was influenced by the code snippit from 
+        https://www.w3schools.com/howto/howto_js_tabs.asp */
 function changeTab(event, tabName) {     
     var tabBtn = document.getElementsByClassName("tabBtn");
     var tabcontent = document.getElementsByClassName("tabcontent");   
@@ -117,7 +119,17 @@ function register() {
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.send(JSON.stringify(registration));
     xhr.onload = function () {
-        alert("You are now registered " + login);
+        var resp = JSON.parse(xhr.responseText);
+        if(resp == "User registered"){
+            alert("Thankyou for registering " + login + ".");
+            document.getElementById('login').value = "";
+            document.getElementById('password').value = "";
+            document.getElementById('address').value = "";
+        }
+        else {
+            alert("Invalid username.");
+            document.getElementById('password').value = "";
+        }
     }
 }
 

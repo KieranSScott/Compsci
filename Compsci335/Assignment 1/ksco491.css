@@ -1,18 +1,6 @@
 h1 {
     color: blue;
 }
-.tabs {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1ff;
-}
-
-
-.tabs button {
-    background-color: inherit;
-    border: none;
-    padding: 14px 16px;
-}
 
 .gutters {
     display: inline-block;
@@ -59,6 +47,8 @@ h1 {
     border: 2px solid #aaa;
 }
 
+/*The following code on for the tabbing function of the website was influenced by the code snippit from 
+        https://www.w3schools.com/howto/howto_js_tabs.asp */
 .tabs button:hover {
     background-color: #0000ff;
     color: #ffffff;
@@ -75,4 +65,16 @@ h1 {
     border: 1px solid #ccc;
     border-top: none;
     background-color: #f1f1ff;
+}
+.tabs {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1ff;
+}
+
+
+.tabs button {
+    background-color: inherit;
+    border: none;
+    padding: 14px 16px;
 }
